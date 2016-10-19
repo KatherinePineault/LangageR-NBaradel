@@ -26,4 +26,26 @@ dim_mod(y) #devrait donner [1] 5
 
 
 ### Dernier élément
-        ## 
+        ## Écrire une fonction qui teste le type de l'argument. Si celui-ci est un vecteur, la fonction 
+        # renvoie le dernier élément. Si celui-ci est une matrice, la fonction renvoie le dernier élément
+        # de la première ligne. 
+
+dernier_element<- function(x){
+        if(is.matrix(x)==TRUE){
+                l<- dim(x)
+                long<- l[2]
+                result<- x[1,long]
+                result
+        } else {
+                long<- length(x)
+                result<- x[long]
+                result
+        }
+}
+
+## TESTONS LE TOUT! 
+dernier_element(x) #devrait donner [1] 7 
+dernier_element(y) #devrait donner [1] 5
+
+# VOILÀ C'EST FAIT! 
+
