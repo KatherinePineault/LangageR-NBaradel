@@ -40,3 +40,7 @@ f(-3) #devrait donner 0
 X<- cbind(c(1,2,1,3,2), c(121,256,842,510,82), c(1,2,3,4,5), c(5,11,2,7,3))
         # Trier la matrice par ordre croissant selon la première colonne et, en cas d'égalité, 
         # selon la deuxième colonne (toujours par ordre croissant).
+
+X<- X[order(X[,1], X[,2]),]
+
+
